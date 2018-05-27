@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/helinjiang/pro-node/issues"
   },
-  "homepage": "https://github.com/helinjiang/pro-node#readme"
+  "homepage": "https://github.com/helinjiang/pro-node#readme",
+  "devDependencies": {
+    "vm2": "^3.6.0"
+  }
 }
