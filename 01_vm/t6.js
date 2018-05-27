@@ -13,6 +13,18 @@ const vm = new NodeVM({
         external: true,
         builtin: ['fs', 'path']
         // root: __dirname
+    },
+    compiler: function (code, filePath) {
+        console.log(code);
+        console.log(filePath);
+
+        let result = babel.transform(code, {
+            presets: ['env', 'stage-0']
+        });
+
+        console.log(result.code);
+
+        return result.code;
     }
 });
 
@@ -22,13 +34,7 @@ fs.readFile(TARGET_PATH, 'utf8', (err, data) => {
     if (err) throw err;
     console.log(data);
 
-    let result = babel.transform(data, {
-        presets: ['env', 'stage-0']
-    });
-
-    console.log(result.code);
-
-    let functionInSandbox = vm.run(result.code, TARGET_PATH);
+    let functionInSandbox = vm.run(data, TARGET_PATH);
 
     console.log('====result====', functionInSandbox.default());
 });
