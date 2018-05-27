@@ -10,5 +10,3 @@ function getResult() {
 }
 
 module.exports = getResult;
-
-console.log(getResult());
