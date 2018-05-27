@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/helinjiang/pro-node#readme",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
     "vm2": "^3.6.0"
   },
   "dependencies": {
