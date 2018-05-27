@@ -22,5 +22,8 @@
   "homepage": "https://github.com/helinjiang/pro-node#readme",
   "devDependencies": {
     "vm2": "^3.6.0"
+  },
+  "dependencies": {
+    "mockjs": "^1.0.1-beta3"
   }
 }
